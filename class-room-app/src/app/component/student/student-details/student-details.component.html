@@ -1,0 +1,19 @@
+<h2>Thông tin chi tiết</h2>
+
+<hr/>
+<div *ngIf="student">
+  <div>
+    <label><b>Tên: </b></label> {{student.name}}
+  </div>
+  <div>
+    <label><b>Tuổi: </b></label> {{student.age}}
+  </div>
+  <div>
+    <label><b>Lớp: </b></label> {{student.classRoom.name}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="listStudent()" class="btn btn-primary">Back to Student List</button><br>
+

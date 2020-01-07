@@ -1,0 +1,12 @@
+<h2>Thông tin chi tiết</h2>
+
+<hr/>
+<div *ngIf="classRoom">
+  <div>
+    <label><b>Tên Lớp: </b></label> {{classRoom.name}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="listClass()" class="btn btn-primary">Back to Class List</button><br>

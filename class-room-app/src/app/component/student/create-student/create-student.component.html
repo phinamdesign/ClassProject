@@ -1,0 +1,32 @@
+<h3>Create Student</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">Tên</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="student.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Tuổi</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="student.age" name="age">
+    </div>
+
+    <div class="form-group">
+      <select name="" id="">
+        <option value="">Select class</option>
+        <option *ngFor="let class of classRoom" value="{{class.id}}">{{class.name}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+  </form>
+</div>
+
+<div>
+ <p>{{student.classRoom.name}}</p>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
